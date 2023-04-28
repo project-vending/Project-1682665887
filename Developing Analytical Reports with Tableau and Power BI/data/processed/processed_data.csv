@@ -1,0 +1,18 @@
+python
+import os
+import pandas as pd
+
+# Define the project directory
+project_dir = "Developing Analytical Reports with Tableau and Power BI"
+
+# Define the path to the processed data file
+processed_data_file = os.path.join(project_dir, "data", "processed", "processed_data.csv")
+
+# Read the data from the file into a Pandas DataFrame
+df_processed_data = pd.read_csv(processed_data_file)
+
+# Do some processing on the data (e.g. filtering, aggregating, etc.)
+...
+
+# Save the processed data to a new file
+df_processed_data.to_csv(os.path.join(project_dir, "data", "processed", "processed_data_processed.csv"), index=False)
