@@ -1,0 +1,19 @@
+python
+import csv
+import os
+
+# Define the file path
+file_path = os.path.join("Developing Analytical Reports with Tableau and Power BI", "data", "raw", "raw_data.csv")
+
+# Define the sample data
+data = [
+    ["Name", "Age", "Gender", "Salary"],
+    ["John", 35, "Male", 50000],
+    ["Jane", 28, "Female", 65000],
+    ["Bob", 42, "Male", 80000]
+]
+
+# Write data to the CSV file
+with open(file_path, mode="w", newline="") as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerows(data)
